@@ -1,7 +1,9 @@
 package com.example.notify;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.v4.app.INotificationSideChannel;
@@ -39,19 +41,19 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v){
-                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MainActivity.this);
+                /*NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MainActivity.this);
                 mBuilder.setSmallIcon(R.drawable.ic_launcher_foreground);
                 mBuilder.setContentTitle("Tutlane Send New Message");
                 mBuilder.setContentText("Hi, Welcome to Tutlane tutorial site");
                 mBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
 
-                /*NotificationCompat.Builder vbuilder = new NotificationCompat.Builder(MainActivity.this)
+                NotificationCompat.Builder vbuilder = new NotificationCompat.Builder(MainActivity.this)
                         .setSmallIcon(R.drawable.ic_launcher_foreground)
                         .setContentTitle("My Notification")
                         .setContentText("Much longer text that cannot fit one line....")
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-                */
+
 
                 Intent resultIntent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, resultIntent, 0);
@@ -59,6 +61,17 @@ public class MainActivity extends AppCompatActivity {
                 NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
                 notificationManager.notify(mNotificationId, mBuilder.build());
+                */
+
+                NotificationManager notif = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+                Notification notify = new Notification.Builder(getApplicationContext())
+                        .setContentTitle("title")
+                        .setContentText("body")
+                        .setContentTitle("subject")
+                        .setSmallIcon(R.drawable.ic_launcher_foreground).build();
+
+                notify.flags |= Notification.FLAG_AUTO_CANCEL;
+                notif.notify(0, notify);
             }
         });
     }
