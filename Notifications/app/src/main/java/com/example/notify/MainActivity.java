@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         notif_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this,"My Notification");
-                builder.setContentTitle("Message Notification");
-                builder.setContentText("Hello This is Text Message");
-                builder.setSmallIcon(R.drawable.ic_launcher_background);
-                builder.setAutoCancel(true);
+                NotificationCompat.Builder mbuilder = new NotificationCompat.Builder(MainActivity.this,"My Notification")
+                    .setContentTitle("Message Notification")
+                    .setContentText("Hello This is Text Message")
+                    .setSmallIcon(R.drawable.ic_launcher_background)
+                    .setAutoCancel(true);
                 NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity.this);
-                managerCompat.notify( 1,builder.build());
+                managerCompat.notify( 1,mbuilder.build());
             }
         });
 
