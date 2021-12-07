@@ -1,78 +1,70 @@
 package com.example.notify;
-import android.app.Notification;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Build;
-import android.support.v4.app.INotificationSideChannel;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.nio.channels.Channels;
-
 public class MainActivity extends AppCompatActivity {
+
+    Button btnnotif;
+    Button btnbig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn_Notify = (Button)findViewById(R.id.button_show);
-        btn_Notify.setOnClickListener(new View.OnClickListener(){
+        btnnotif = findViewById(R.id.button_show);
+        btnbig = findViewById(R.id.btn_Big);
 
-           /* private void createNotificationChannel(){
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    CharSequence name = getString(R.string.app_name);
-                    String description = getString(R.string.app_name);
-                    int importance = NotificationManager.IMPORTANCE_DEFAULT;
-                    NotificationChannel channel = new NotificationChannel(1, name, importance);
-                    channel.setDescription(description);
-                    NotificationManager notificationManager = getSystemService(NotificationManager.class);
-                    notificationManager.createNotificationChannel(channel);
-                }
-            }
-            */
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("My Notification","My Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
 
+        }
+        btnnotif.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                /*NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MainActivity.this);
-                mBuilder.setSmallIcon(R.drawable.ic_launcher_foreground);
-                mBuilder.setContentTitle("Tutlane Send New Message");
-                mBuilder.setContentText("Hi, Welcome to Tutlane tutorial site");
-                mBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-
-                NotificationCompat.Builder vbuilder = new NotificationCompat.Builder(MainActivity.this)
-                        .setSmallIcon(R.drawable.ic_launcher_foreground)
-                        .setContentTitle("My Notification")
-                        .setContentText("Much longer text that cannot fit one line....")
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-
-                Intent resultIntent = new Intent(MainActivity.this, MainActivity.class);
-                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, resultIntent, 0);
-                int mNotificationId = 001;
-                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
-                notificationManager.notify(mNotificationId, mBuilder.build());
-                */
-
-                NotificationManager notif = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-                Notification notify = new Notification.Builder(getApplicationContext())
-                        .setContentTitle("title")
-                        .setContentText("body")
-                        .setContentTitle("subject")
-                        .setSmallIcon(R.drawable.ic_launcher_foreground).build();
-
-                notify.flags |= Notification.FLAG_AUTO_CANCEL;
-                notif.notify(0, notify);
+            public void onClick(View v) {
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this,"My Notification");
+                builder.setContentTitle("Message Notification");
+                builder.setContentText("Hello This is Text Message");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity.this);
+                managerCompat.notify( 1,builder.build());
             }
         });
+        btnbig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+// Assign big picture notification
+                NotificationCompat.BigPictureStyle bpStyle = new NotificationCompat.BigPictureStyle();
+                bpStyle.bigPicture(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher_foreground)).build();
+// Set the intent to fire when the user taps on
+                Intent rIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://tutlane.com/"));
+                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, rIntent, 0);
+                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MainActivity.this)
+                        .setSmallIcon(R.drawable.ic_launcher_background)
+                        .setContentTitle("Big Picture Notification Example")
+                        .addAction(R.drawable.ic_launcher_foreground, "Share", pendingIntent)
+                        .setStyle(bpStyle);
+                mBuilder.setContentIntent(pendingIntent);
+// Sets an ID for the notification
+                NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+// It will display the notification in notification bar
+                notificationManager.notify(02, mBuilder.build());
+            }
+        });
+
     }
 }
