@@ -31,27 +31,27 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Selected Item: " + item.getTitle(),
                     Toast.LENGTH_SHORT).show();
             switch (item.getItemId()) {
-                case R.id.itemsearch:
+                case R.id.itemprofile:
 
                     return true;
 
-                case R.id.itemupload:
+                case R.id.itemcreategroup:
 
                     return true;
 
-                case R.id.copy_item:
+                case R.id.itemsetting:
 
                     return true;
 
-                case R.id.print_item:
+                case R.id.itemhelp:
 
                     return true;
 
-                case R.id.share_item:
+                case R.id.itemrequest:
 
                     return true;
 
-                case R.id.bookmark_item:
+                case R.id.itemlogout:
 
                     return true;
 
