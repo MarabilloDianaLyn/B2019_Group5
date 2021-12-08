@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button m_btn = (Button) findViewById(R.id.buttonn);
+        Button m_btn = (Button) findViewById(R.id.buttonshow);
         registerForContextMenu(m_btn);
     }
 
