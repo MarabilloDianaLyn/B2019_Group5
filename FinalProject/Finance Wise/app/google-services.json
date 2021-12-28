@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "660606944",
+    "project_id": "finance-wise-bfbe3",
+    "storage_bucket": "finance-wise-bfbe3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660606944:android:5982cc326352b716a02585",
+        "android_client_info": {
+          "package_name": "com.example.financewise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660606944-k3btseg2lpb6knrlvof5k7ut4lf2lnc3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.financewise",
+            "certificate_hash": "d6a7bc18e1e09694c17c84b8842d7143f9765663"
+          }
+        },
+        {
+          "client_id": "660606944-n5uhsv8kp9qsi3r17kclf2gr6bc6jnne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo495mhi_k6aRxhyoSS83B92J8u-HO00U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660606944-n5uhsv8kp9qsi3r17kclf2gr6bc6jnne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
