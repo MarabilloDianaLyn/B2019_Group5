@@ -2,6 +2,7 @@ package com.example.financewise;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.UiModeManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
+    private UiModeManager uiModeManager;
     private static int SPLASH = 3000;
     Animation animation;
     private ImageView imageView;
@@ -22,6 +24,9 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splashscreen);
 
