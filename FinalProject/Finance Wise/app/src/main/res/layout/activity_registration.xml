@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_margin="20dp"
-    tools:context=".LogInActivity">
+    tools:context=".RegistrationActivity">
 
     <ImageView
         android:layout_width="200dp"
@@ -15,21 +15,43 @@
         android:src = "@drawable/financewise_logo" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/rgstr_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "Enter Email"
+        android:hint = "Full Name"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:textColorHint="#000"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:id="@+id/rgstr_contactno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint = "Contact Number"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:textColorHint="#000"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:id="@+id/rgstr_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint = "Set Email"
         android:textColor="#000"
         android:textSize="20sp"
         android:inputType="textEmailAddress"
         android:textColorHint="#000"
-        android:layout_marginTop="10dp"/>
+        android:layout_margin="5dp"/>
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/rgstr_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "Enter Password"
+        android:hint = "Set Password"
         android:textColor="#000"
         android:textSize="20sp"
         android:inputType="textPassword"
@@ -37,17 +59,17 @@
         android:layout_margin="5dp"/>
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/rgstr_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Log-in"
+        android:text="Sign-up"
         android:layout_margin="5dp"/>
 
     <TextView
-        android:id="@+id/loginQn"
+        android:id="@+id/rgstrloginQn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have account yet? Click here to Sign-up"
+        android:text="Already have account? Click here to Log-in"
         android:gravity="center" />
 
 </LinearLayout>
