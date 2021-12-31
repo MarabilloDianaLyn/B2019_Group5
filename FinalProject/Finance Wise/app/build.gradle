@@ -6,8 +6,7 @@ plugins {
 /apply plugin: 'com.google.gms.google-services'/
 
 android {
-    compileSdkVersion 'android-S'
-    buildToolsVersion "30.0.2"
+    compileSdk 30
 
     defaultConfig {
         applicationId "com.example.financewise"
