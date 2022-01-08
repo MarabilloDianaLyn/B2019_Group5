@@ -47,7 +47,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        rgstr_btn.setOnClickListener(new View.OnClickListener() {
+       /* rgstr_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String emailString = rgstr_email.getText().toString();
@@ -89,6 +89,6 @@ public class RegistrationActivity extends AppCompatActivity {
                     });
                 }
             }
-        });
+        }); */
     }
 }
