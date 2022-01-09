@@ -39,6 +39,9 @@ public class RegistrationActivity extends AppCompatActivity {
         rgstr_btn = findViewById(R.id.rgstr_btn);
         rgstrloginQn = findViewById(R.id.rgstrloginQn);
 
+        mAuth = FirebaseAuth.getInstance();
+        progressDialog = new ProgressDialog(this);
+
         rgstrloginQn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -89,6 +92,6 @@ public class RegistrationActivity extends AppCompatActivity {
                     });
                 }
             }
-        }); 
+        });
     }
 }
