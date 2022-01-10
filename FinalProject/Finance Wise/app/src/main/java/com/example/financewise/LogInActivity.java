@@ -70,7 +70,7 @@ public class LogInActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                               Intent intent = new Intent(LogInActivity.this, DashboardActivity.class);
+                               Intent intent = new Intent(LogInActivity.this, ExpenseActivity.class);
 
                                finish();
                                progressDialog.dismiss();
