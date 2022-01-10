@@ -70,12 +70,10 @@ public class LogInActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                               Intent intent = new Intent(LogInActivity.this, ExpenseActivity.class);
-
+                               Intent intent = new Intent(LogInActivity.this, DashboardActivity.class);
+                               startActivity(intent);
                                finish();
                                progressDialog.dismiss();
-
-                                startActivity(intent);
                             }
                             else{
                                 Toast.makeText(LogInActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
