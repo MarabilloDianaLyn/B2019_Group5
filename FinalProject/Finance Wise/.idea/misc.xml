@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/drawable/btn_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/drawable/date_background.xml" value="0.2203125" />
         <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/drawable/expensebtn_background.xml" value="0.2203125" />
         <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/drawable/incomebtn_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/drawable/textview_background.xml" value="0.2203125" />
         <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/layout/activity_dashboard.xml" value="0.22" />
-        <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/layout/activity_expense.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/layout/activity_expense.xml" value="0.2" />
         <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/layout/activity_log_in.xml" value="0.25" />
         <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Acer-PC/Documents/GitHub/B2019_Group5/FinalProject/Finance Wise/app/src/main/res/layout/activity_registration.xml" value="0.20416666666666666" />
