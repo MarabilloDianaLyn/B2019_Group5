@@ -11,12 +11,12 @@
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@drawable/date_background"
         android:ems="10"
         android:inputType="date"
         android:minHeight="48dp"
-        android:background="@drawable/date_background"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -166,7 +166,7 @@
         android:id="@+id/button21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/btn_background"
         android:layout_weight="1"
