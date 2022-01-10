@@ -16,6 +16,9 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        expense_Btn = findViewById(R.id.expense_btn);
+        income_Btn = findViewById(R.id.income_btn);
+
         //code for analytics
 
         //-----------
