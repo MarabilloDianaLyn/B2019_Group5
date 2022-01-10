@@ -19,7 +19,7 @@ public class DashboardActivity extends AppCompatActivity {
         //code for analytics
 
         //-----------
-/*
+
         expense_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +34,7 @@ public class DashboardActivity extends AppCompatActivity {
                 Intent intent = new Intent (DashboardActivity.this, IncomeActivity.class);
                 startActivity(intent);
             }
-        }); */
+        });
 
     }
 }
