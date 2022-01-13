@@ -18,10 +18,11 @@
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
         android:textColor="#000"
@@ -32,12 +33,13 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "Enter Password"
-        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="#000"
         android:textColorHint="@color/gray"
-        android:layout_margin="5dp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/login_btn"

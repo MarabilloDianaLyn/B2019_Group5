@@ -65,6 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+
         rgstr_email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
