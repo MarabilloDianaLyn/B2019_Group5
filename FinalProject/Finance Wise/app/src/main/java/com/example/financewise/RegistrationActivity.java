@@ -51,35 +51,6 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        rgstr_name.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rgstr_name.setText("");
-            }
-        });
-
-        rgstr_contactno.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rgstr_contactno.setText("");
-            }
-        });
-
-
-        rgstr_email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rgstr_email.setText("");
-            }
-        });
-
-        rgstr_password.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rgstr_password.setText("");
-            }
-        });
-
        rgstr_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
