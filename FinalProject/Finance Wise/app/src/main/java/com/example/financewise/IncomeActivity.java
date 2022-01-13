@@ -47,14 +47,14 @@ public class IncomeActivity extends AppCompatActivity {
         one_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                income_txtview.setText("1");
+                income_txtview.setText(income_txtview.getText() + "1");
             }
         });
 
         two_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                income_txtview.setText("2");
+                income_txtview.setText(income_txtview.getText() + "2");
             }
         });
     }
