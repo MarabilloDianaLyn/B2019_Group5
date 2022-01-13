@@ -20,9 +20,9 @@
         android:layout_height="wrap_content"
         android:hint = "Full Name"
         android:textColor="#000"
+        android:textColorHint="@color/gray"
         android:textSize="20sp"
         android:inputType="text"
-        android:textColorHint="#000"
         android:layout_margin="5dp"/>
 
     <EditText
@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:hint = "Contact Number"
         android:textColor="#000"
+        android:textColorHint="@color/gray"
         android:textSize="20sp"
         android:inputType="number"
-        android:textColorHint="#000"
         android:layout_margin="5dp"/>
 
     <EditText
@@ -42,26 +42,30 @@
         android:layout_height="wrap_content"
         android:hint = "Set Email"
         android:textColor="#000"
+        android:textColorHint="@color/gray"
         android:textSize="20sp"
         android:inputType="textEmailAddress"
-        android:textColorHint="#000"
         android:layout_margin="5dp"/>
 
     <EditText
         android:id="@+id/rgstr_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "Set Password"
-        android:textColor="#000"
-        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:hint="Set Password"
         android:inputType="textPassword"
-        android:textColorHint="#000"
-        android:layout_margin="5dp"/>
+        android:textColor="#000"
+        android:textColorHint="@color/gray"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/rgstr_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/mintgreen"
+        android:textColor="@color/white"
+        android:textSize="@dimen/browser_actions_context_menu_min_padding"
+        android:textStyle="normal"
         android:text="Sign-up"
         android:layout_margin="5dp"/>
 

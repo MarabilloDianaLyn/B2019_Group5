@@ -2,6 +2,7 @@ package com.example.financewise;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.Color;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -47,6 +48,34 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(RegistrationActivity.this, LogInActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        rgstr_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rgstr_name.setText("");
+            }
+        });
+
+        rgstr_contactno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rgstr_contactno.setText("");
+            }
+        });
+
+        rgstr_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rgstr_email.setText("");
+            }
+        });
+
+        rgstr_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rgstr_password.setText("");
             }
         });
 

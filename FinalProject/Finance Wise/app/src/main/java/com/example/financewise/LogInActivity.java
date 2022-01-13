@@ -49,6 +49,20 @@ public class LogInActivity extends AppCompatActivity {
             }
         });
 
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                email.setText("");
+            }
+        });
+
+        password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                password.setText("");
+            }
+        });
+
         login_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

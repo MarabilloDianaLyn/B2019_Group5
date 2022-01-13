@@ -18,30 +18,38 @@
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "Enter Email"
-        android:textColor="#000"
-        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:hint="Enter Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="#000"
-        android:layout_marginTop="10dp"/>
+        android:textColor="#000"
+        android:textColorHint="@color/gray"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint = "Enter Password"
-        android:textColor="#000"
         android:textSize="20sp"
         android:inputType="textPassword"
-        android:textColorHint="#000"
+        android:textColor="#000"
+        android:textColorHint="@color/gray"
         android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/mintgreen"
+        android:fontFamily="sans-serif-medium"
         android:text="Log-in"
-        android:layout_margin="5dp"/>
+        android:textColor="@color/white"
+        android:textSize="@dimen/browser_actions_context_menu_min_padding"
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/loginQn"
