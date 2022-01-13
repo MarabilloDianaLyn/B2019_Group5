@@ -32,16 +32,30 @@ public class IncomeActivity extends AppCompatActivity {
         inccategory_btn = findViewById(R.id.inccategory_btn);
 
         income_date = findViewById(R.id.income_date);
-        income_txtview = findViewById(R.id.income_date);
+        income_txtview = findViewById(R.id.income_txtview);
 
 
         //code for the popup menu
         inccategory_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
         //---------------------------------
+
+        one_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText("1");
+            }
+        });
+
+        two_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText("2");
+            }
+        });
     }
 }
