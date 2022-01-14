@@ -44,6 +44,9 @@ public class IncomeActivity extends AppCompatActivity {
         });
         //---------------------------------
 
+
+
+        //function of numeric buttons
         one_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,5 +60,72 @@ public class IncomeActivity extends AppCompatActivity {
                 income_txtview.setText(income_txtview.getText() + "2");
             }
         });
+
+        three_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "3");
+            }
+        });
+
+        four_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "4");
+            }
+        });
+
+        five_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "5");
+            }
+        });
+
+        six_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "6");
+            }
+        });
+
+        seven_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "7");
+            }
+        });
+
+        eight_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "8");
+            }
+        });
+
+        nine_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "9");
+            }
+        });
+
+        zero_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + "0");
+            }
+        });
+
+        dot_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                income_txtview.setText(income_txtview.getText() + ".");
+                dot_btn.setEnabled(false);
+                
+            }
+        });
+
+        //------------------------------------------------------------------
     }
 }
