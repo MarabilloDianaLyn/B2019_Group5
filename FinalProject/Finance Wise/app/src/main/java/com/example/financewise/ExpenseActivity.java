@@ -41,6 +41,65 @@ public class ExpenseActivity extends AppCompatActivity {
         expcategory_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                PopupMenu m_popup = new PopupMenu(MainActivity.this, v);
+                m_popup.setOnMenuItemClickListener(MainActivity.this::onMenuItemClick);
+
+                m_popup.inflate(R.menu.popupmenu);
+                m_popup.show();
+            }
+        });
+    }
+
+    public boolean onMenuItemClick (MenuItem item) {
+        Toast.makeText(this, "Selected Item: " + item.getTitle(),
+                Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.itemHouse:
+                return true;
+
+            case R.id.iteminsurance:
+                return true;
+
+            case R.id.itemgroceries:
+                return true;
+
+            case R.id.itemelectics:
+                return true;
+
+            case R.id.itemcosmetics:
+                return true;
+
+
+            case R.id.itemwater:
+                return true;
+
+            case R.id.itempet:
+                return true;
+
+            case R.id.itemShopping:
+                hopping:
+                return true;
+
+            case R.id.itemclothes:
+                return true;
+
+            case R.id.itemshoes:
+                return true;
+
+            case R.id.itemaccessories:
+                return true;
+
+            case R.id.itemfurniture:
+                return true;
+
+            case R.id.itemgift:
+                return true;
+
+            case R.id.itemscar:
+                return true;
+
+            default:
+                return false;
 
             }
         });
