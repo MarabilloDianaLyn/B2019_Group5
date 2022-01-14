@@ -122,7 +122,7 @@ public class IncomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + ".");
                 dot_btn.setEnabled(false);
-                
+
             }
         });
 
