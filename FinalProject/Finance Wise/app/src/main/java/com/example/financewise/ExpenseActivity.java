@@ -1,11 +1,14 @@
 package com.example.financewise;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 public class ExpenseActivity extends AppCompatActivity {
 
@@ -37,24 +40,23 @@ public class ExpenseActivity extends AppCompatActivity {
         //-------------------------------------------------
 
 
-        //code for popup menu is here
+//code for popup menu
         expcategory_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu m_popup = new PopupMenu(MainActivity.this, v);
-                m_popup.setOnMenuItemClickListener(MainActivity.this::onMenuItemClick);
+                PopupMenu mpopup = new PopupMenu(ExpenseActivity.this, v);
+                mpopup.setOnMenuItemClickListener(ExpenseActivity.this::onMenuItemClick);
 
-                m_popup.inflate(R.menu.popupmenu);
-                m_popup.show();
+                mpopup.inflate(R.menu.expense_popup);
+                mpopup.show();
             }
         });
-    }
-
+/*
     public boolean onMenuItemClick (MenuItem item) {
         Toast.makeText(this, "Selected Item: " + item.getTitle(),
                 Toast.LENGTH_SHORT).show();
         switch (item.getItemId()) {
-            case R.id.itemHouse:
+            case R.id.Bills:
                 return true;
 
             case R.id.iteminsurance:
@@ -68,7 +70,6 @@ public class ExpenseActivity extends AppCompatActivity {
 
             case R.id.itemcosmetics:
                 return true;
-
 
             case R.id.itemwater:
                 return true;
@@ -102,9 +103,12 @@ public class ExpenseActivity extends AppCompatActivity {
                 return false;
 
             }
-        });
-        //----------------------------
-        
+        }
+
+//---------------------------------------------------------
+*/
+
+
         //function for numeric buttons
         one_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -186,4 +190,16 @@ public class ExpenseActivity extends AppCompatActivity {
         
         //-----------------------------------------------------------
     }
+
+    private boolean onMenuItemClick(MenuItem item) {
+        Toast.makeText(this, "Selected Item: " + item.getTitle(),
+                Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.Bills:
+                return true;
+        }
+
+        return false;
+    }
 }
+
