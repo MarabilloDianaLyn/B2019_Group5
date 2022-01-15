@@ -34,6 +34,7 @@ public class IncomeActivity extends AppCompatActivity {
         income_date = findViewById(R.id.income_date);
         income_txtview = findViewById(R.id.income_txtview);
 
+        /*
 
         //code for the popup menu
         inccategory_btn.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +104,7 @@ public class IncomeActivity extends AppCompatActivity {
         });
         //---------------------------------
 
-
+*/
 
         //function of numeric buttons
         one_btn.setOnClickListener(new View.OnClickListener() {
