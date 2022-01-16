@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/Bills"
+        android:id="@+id/iBills"
         android:title="Bills" />
+    <item
+        android:id="@+id/iCar"
+        android:title="Car" />
+    <item
+        android:id="@+id/iChildren"
+        android:title="Children" />
+    <item
+        android:id="@+id/iClothes"
+        android:title="Clothes" />
+    <item
+        android:id="@+id/iCommunications"
+        android:title="Communications" />
+    <item
+        android:id="@+id/iCosmetics"
+        android:title="Cosmetics" />
+    <item
+        android:id="@+id/iEducation"
+        android:title="Education" />
+    <item
+        android:id="@+id/iEntertainment"
+        android:title="Entertainment" />
+    <item
+        android:id="@+id/iFood"
+        android:title="Food" />
+    <item
+        android:id="@+id/iGifts"
+        android:title="Gifts" />
+    <item
+        android:id="@+id/iHealth"
+        android:title="Health" />
+    <item
+        android:id="@+id/iHobby"
+        android:title="Hobby" />
+    <item
+        android:id="@+id/iHouse"
+        android:title="House" />
+    <item
+        android:id="@+id/iHygiene"
+        android:title="Hygiene" />
+    <item
+        android:id="@+id/iMonthlyMemberships"
+        android:title="Monthly Memberships/Subscription" />
+    <item
+        android:id="@+id/iPets"
+        android:title="Pets" />
+    <item
+        android:id="@+id/iPocketMoney"
+        android:title="Pocket Money" />
+    <item
+        android:id="@+id/iSports"
+        android:title="Sports" />
+    <item
+        android:id="@+id/iToiletry"
+        android:title="Toiletry" />
+    <item
+        android:id="@+id/iTransportation"
+        android:title="Transportation" />
+    <item
+        android:id="@+id/iTravel"
+        android:title="Travel" />
 </menu>

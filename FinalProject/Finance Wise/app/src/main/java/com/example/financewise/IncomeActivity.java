@@ -3,9 +3,12 @@ package com.example.financewise;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 public class IncomeActivity extends AppCompatActivity {
 
@@ -34,79 +37,22 @@ public class IncomeActivity extends AppCompatActivity {
         income_date = findViewById(R.id.income_date);
         income_txtview = findViewById(R.id.income_txtview);
 
-        /*
 
-        //code for the popup menu
+
+//code for popup menu
         inccategory_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu m_popup = new PopupMenu(MainActivity.this, v);
-                m_popup.setOnMenuItemClickListener(MainActivity.this::onMenuItemClick);
+                PopupMenu mpopup = new PopupMenu(IncomeActivity.this, v);
+                mpopup.setOnMenuItemClickListener(IncomeActivity.this::onMenuItemClick);
 
-                m_popup.inflate(R.menu.popupmenu);
-                m_popup.show();
+                mpopup.inflate(R.menu.income_popup);
+                mpopup.show();
             }
         });
-    }
+//-----------------------------------------------------------------------------------
 
-    public boolean onMenuItemClick (MenuItem item) {
-        Toast.makeText(this, "Selected Item: " + item.getTitle(),
-                Toast.LENGTH_SHORT).show();
-        switch (item.getItemId()) {
-            case R.id.itemHouse:
-                return true;
-
-            case R.id.iteminsurance:
-                return true;
-
-            case R.id.itemgroceries:
-                return true;
-
-            case R.id.itemelectics:
-                return true;
-
-            case R.id.itemcosmetics:
-                return true;
-
-
-            case R.id.itemwater:
-                return true;
-
-            case R.id.itempet:
-                return true;
-
-            case R.id.itemShopping:
-                hopping:
-                return true;
-
-            case R.id.itemclothes:
-                return true;
-
-            case R.id.itemshoes:
-                return true;
-
-            case R.id.itemaccessories:
-                return true;
-
-            case R.id.itemfurniture:
-                return true;
-
-            case R.id.itemgift:
-                return true;
-
-            case R.id.itemscar:
-                return true;
-
-            default:
-                return false;
-
-            }
-        });
-        //---------------------------------
-
-*/
-
-        //function of numeric buttons
+//function of numeric buttons
         one_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,7 +131,30 @@ public class IncomeActivity extends AppCompatActivity {
 
             }
         });
+//--------------------------------------------------------------------------------------------------
 
-        //------------------------------------------------------------------
+    }
+
+    private boolean onMenuItemClick(MenuItem item) {
+        Toast.makeText(this, "Selected Item: " + item.getTitle(),
+                Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.iAllowance:
+                return true;
+
+            case R.id.iCashAssist:
+                return true;
+
+            case R.id.iDeposits:
+                return true;
+
+            case R.id.iSalary:
+                return true;
+
+            case R.id.iSavings:
+                return true;
+
+        }
+        return false;
     }
 }

@@ -51,63 +51,8 @@ public class ExpenseActivity extends AppCompatActivity {
                 mpopup.show();
             }
         });
-/*
-    public boolean onMenuItemClick (MenuItem item) {
-        Toast.makeText(this, "Selected Item: " + item.getTitle(),
-                Toast.LENGTH_SHORT).show();
-        switch (item.getItemId()) {
-            case R.id.Bills:
-                return true;
 
-            case R.id.iteminsurance:
-                return true;
-
-            case R.id.itemgroceries:
-                return true;
-
-            case R.id.itemelectics:
-                return true;
-
-            case R.id.itemcosmetics:
-                return true;
-
-            case R.id.itemwater:
-                return true;
-
-            case R.id.itempet:
-                return true;
-
-            case R.id.itemShopping:
-                hopping:
-                return true;
-
-            case R.id.itemclothes:
-                return true;
-
-            case R.id.itemshoes:
-                return true;
-
-            case R.id.itemaccessories:
-                return true;
-
-            case R.id.itemfurniture:
-                return true;
-
-            case R.id.itemgift:
-                return true;
-
-            case R.id.itemscar:
-                return true;
-
-            default:
-                return false;
-
-            }
-        }
-
-//---------------------------------------------------------
-*/
-
+//------------------------------------------------------------------------------------------------
 
         //function for numeric buttons
         one_btn.setOnClickListener(new View.OnClickListener() {
@@ -191,11 +136,71 @@ public class ExpenseActivity extends AppCompatActivity {
         //-----------------------------------------------------------
     }
 
-    private boolean onMenuItemClick(MenuItem item) {
+    public boolean onMenuItemClick(MenuItem item) {
         Toast.makeText(this, "Selected Item: " + item.getTitle(),
                 Toast.LENGTH_SHORT).show();
         switch (item.getItemId()) {
-            case R.id.Bills:
+            case R.id.iBills:
+                return true;
+
+            case R.id.iCar:
+                return true;
+
+            case R.id.iChildren:
+                return true;
+
+            case R.id.iClothes:
+                return true;
+
+            case R.id.iCommunications:
+                return true;
+
+            case R.id.iCosmetics:
+                return true;
+
+            case R.id.iEducation:
+                return true;
+
+            case R.id.iEntertainment:
+                return true;
+
+            case R.id.iFood:
+                return true;
+
+            case R.id.iGifts:
+                return true;
+
+            case R.id.iHealth:
+                return true;
+
+            case R.id.iHobby:
+                return true;
+
+            case R.id.iHouse:
+                return true;
+
+            case R.id.iHygiene:
+                return true;
+
+            case R.id.iMonthlyMemberships:
+                return true;
+
+            case R.id.iPets:
+                return true;
+
+            case R.id.iPocketMoney:
+                return true;
+
+            case R.id.iSports:
+                return true;
+
+            case R.id.iToiletry:
+                return true;
+
+            case R.id.iTransportation:
+                return true;
+
+            case R.id.iTravel:
                 return true;
         }
 
