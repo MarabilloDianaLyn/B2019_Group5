@@ -80,7 +80,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                Intent intent = new Intent(RegistrationActivity.this, DashboardActivity.class);
+                                Intent intent = new Intent(RegistrationActivity.this, LogInActivity.class);
                                 startActivity(intent);
                                 finish();
                                 progressDialog.dismiss();
