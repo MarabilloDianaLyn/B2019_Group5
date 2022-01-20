@@ -12,8 +12,9 @@ import android.widget.Toast;
 
 public class ExpenseActivity extends AppCompatActivity {
 
-    private Button one_btn, two_btn, three_btn, four_btn, five_btn, six_btn,
-            seven_btn, eight_btn, nine_btn, zero_btn, dot_btn, expcategory_btn;
+    private Button one_expbtn, two_expbtn, three_expbtn, four_expbtn, five_expbtn, six_expbtn,
+            seven_expbtn, eight_expbtn, nine_expbtn, zero_expbtn, dot_expbtn, del_expbtn, expcheck_btn,
+            expcategory_btn;
     private EditText expense_date, expense_txtview;
 
     @Override
@@ -22,18 +23,21 @@ public class ExpenseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_expense);
 
         //
-        one_btn = findViewById(R.id.one_btn);
-        two_btn = findViewById(R.id.two_btn);
-        three_btn = findViewById(R.id.three_btn);
-        four_btn = findViewById(R.id.four_btn);
-        five_btn = findViewById(R.id.five_btn);
-        six_btn = findViewById(R.id.six_btn);
-        seven_btn = findViewById(R.id.seven_btn);
-        eight_btn = findViewById(R.id.eight_btn);
-        nine_btn = findViewById(R.id.nine_btn);
-        zero_btn = findViewById(R.id.zero_btn);
-        dot_btn = findViewById(R.id.dot_btn);
+        one_expbtn = findViewById(R.id.one_expbtn);
+        two_expbtn = findViewById(R.id.two_expbtn);
+        three_expbtn = findViewById(R.id.three_expbtn);
+        four_expbtn = findViewById(R.id.four_expbtn);
+        five_expbtn = findViewById(R.id.five_expbtn);
+        six_expbtn = findViewById(R.id.six_expbtn);
+        seven_expbtn = findViewById(R.id.seven_expbtn);
+        eight_expbtn = findViewById(R.id.eight_expbtn);
+        nine_expbtn = findViewById(R.id.nine_expbtn);
+        zero_expbtn = findViewById(R.id.zero_expbtn);
+        dot_expbtn = findViewById(R.id.dot_expbtn);
         expcategory_btn = findViewById(R.id.expcategory_btn);
+
+        del_expbtn = findViewById(R.id.del_expbtn);
+        expcheck_btn = findViewById(R.id.expcheck_btn);
 
         expense_date = findViewById(R.id.expense_date);
         expense_txtview = findViewById(R.id.exp_txtview);
@@ -55,81 +59,81 @@ public class ExpenseActivity extends AppCompatActivity {
 //------------------------------------------------------------------------------------------------
 
         //function for numeric buttons
-        one_btn.setOnClickListener(new View.OnClickListener() {
+        one_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "1");
             }
         });
         
-        two_btn.setOnClickListener(new View.OnClickListener() {
+        two_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "2");
             }
         });
         
-        three_btn.setOnClickListener(new View.OnClickListener() {
+        three_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "3");
             }
         });
         
-        four_btn.setOnClickListener(new View.OnClickListener() {
+        four_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "4");
             }
         });
         
-        five_btn.setOnClickListener(new View.OnClickListener() {
+        five_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "5");
             }
         });
         
-        six_btn.setOnClickListener(new View.OnClickListener() {
+        six_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "6");
             }
         });
         
-        seven_btn.setOnClickListener(new View.OnClickListener() {
+        seven_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "7");
             }
         });
         
-        eight_btn.setOnClickListener(new View.OnClickListener() {
+        eight_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "8");
             }
         });
         
-        nine_btn.setOnClickListener(new View.OnClickListener() {
+        nine_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "9");
             }
         });
         
-        zero_btn.setOnClickListener(new View.OnClickListener() {
+        zero_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + "0");
             }
         });
 
-        dot_btn.setOnClickListener(new View.OnClickListener() {
+        dot_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 expense_txtview.setText(expense_txtview.getText() + ".");
-                dot_btn.setEnabled(false);
+                dot_expbtn.setEnabled(false);
             }
         });
         

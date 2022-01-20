@@ -12,8 +12,9 @@ import android.widget.Toast;
 
 public class IncomeActivity extends AppCompatActivity {
 
-    private Button one_btn, two_btn, three_btn, four_btn, five_btn, six_btn,
-        seven_btn, eight_btn, nine_btn, zero_btn, dot_btn, inccategory_btn;
+    private Button one_incbtn, two_incbtn, three_incbtn, four_incbtn, five_incbtn, six_incbtn,
+        seven_incbtn, eight_incbtn, nine_incbtn, zero_incbtn, dot_incbtn, del_incbtn, inccheck_btn,
+            inccategory_btn;
     private EditText income_date, income_txtview;
 
     @Override
@@ -21,21 +22,25 @@ public class IncomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_income);
 
-        one_btn = findViewById(R.id.one_btn);
-        two_btn = findViewById(R.id.two_btn);
-        three_btn = findViewById(R.id.three_btn);
-        four_btn = findViewById(R.id.four_btn);
-        five_btn = findViewById(R.id.five_btn);
-        six_btn = findViewById(R.id.six_btn);
-        seven_btn = findViewById(R.id.seven_btn);
-        eight_btn = findViewById(R.id.eight_btn);
-        nine_btn = findViewById(R.id.nine_btn);
-        zero_btn = findViewById(R.id.zero_btn);
-        dot_btn = findViewById(R.id.dot_btn);
+        one_incbtn = findViewById(R.id.one_incbtn);
+        two_incbtn = findViewById(R.id.two_incbtn);
+        three_incbtn = findViewById(R.id.three_incbtn);
+        four_incbtn = findViewById(R.id.four_incbtn);
+        five_incbtn = findViewById(R.id.five_incbtn);
+        six_incbtn = findViewById(R.id.six_incbtn);
+        seven_incbtn = findViewById(R.id.seven_incbtn);
+        eight_incbtn = findViewById(R.id.eight_incbtn);
+        nine_incbtn = findViewById(R.id.nine_incbtn);
+        zero_incbtn = findViewById(R.id.zero_incbtn);
+        dot_incbtn = findViewById(R.id.dot_incbtn);
+
+        del_incbtn = findViewById(R.id.del_incbtn);
+        inccheck_btn = findViewById(R.id.inccheck_btn);
+
         inccategory_btn = findViewById(R.id.inccategory_btn);
 
         income_date = findViewById(R.id.income_date);
-        income_txtview = findViewById(R.id.income_txtview);
+        income_txtview = findViewById(R.id.inc_txtview);
 
 
 
@@ -53,81 +58,81 @@ public class IncomeActivity extends AppCompatActivity {
 //-----------------------------------------------------------------------------------
 
 //function of numeric buttons
-        one_btn.setOnClickListener(new View.OnClickListener() {
+        one_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "1");
             }
         });
 
-        two_btn.setOnClickListener(new View.OnClickListener() {
+        two_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "2");
             }
         });
 
-        three_btn.setOnClickListener(new View.OnClickListener() {
+        three_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "3");
             }
         });
 
-        four_btn.setOnClickListener(new View.OnClickListener() {
+        four_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "4");
             }
         });
 
-        five_btn.setOnClickListener(new View.OnClickListener() {
+        five_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "5");
             }
         });
 
-        six_btn.setOnClickListener(new View.OnClickListener() {
+        six_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "6");
             }
         });
 
-        seven_btn.setOnClickListener(new View.OnClickListener() {
+        seven_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "7");
             }
         });
 
-        eight_btn.setOnClickListener(new View.OnClickListener() {
+        eight_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "8");
             }
         });
 
-        nine_btn.setOnClickListener(new View.OnClickListener() {
+        nine_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "9");
             }
         });
 
-        zero_btn.setOnClickListener(new View.OnClickListener() {
+        zero_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + "0");
             }
         });
 
-        dot_btn.setOnClickListener(new View.OnClickListener() {
+        dot_incbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 income_txtview.setText(income_txtview.getText() + ".");
-                dot_btn.setEnabled(false);
+                dot_incbtn.setEnabled(false);
 
             }
         });
@@ -140,6 +145,7 @@ public class IncomeActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
         switch (item.getItemId()) {
             case R.id.iAllowance:
+
                 return true;
 
             case R.id.iCashAssist:
