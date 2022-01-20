@@ -145,6 +145,7 @@ public class IncomeActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
         switch (item.getItemId()) {
             case R.id.iAllowance:
+                inccategory_btn.setText(item.getItemId());
 
                 return true;
 
