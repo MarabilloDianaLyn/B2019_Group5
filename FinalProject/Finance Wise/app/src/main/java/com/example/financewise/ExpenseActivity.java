@@ -1,6 +1,8 @@
 package com.example.financewise;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.view.MenuItem;
 
 import android.os.Bundle;
@@ -138,6 +140,15 @@ public class ExpenseActivity extends AppCompatActivity {
         });
         
         //-----------------------------------------------------------
+
+        expcheck_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (ExpenseActivity.this, DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public boolean onMenuItemClick(MenuItem item) {

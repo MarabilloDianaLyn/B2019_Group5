@@ -2,6 +2,7 @@ package com.example.financewise;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -137,6 +138,14 @@ public class IncomeActivity extends AppCompatActivity {
             }
         });
 //--------------------------------------------------------------------------------------------------
+
+        inccheck_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (IncomeActivity.this, DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
