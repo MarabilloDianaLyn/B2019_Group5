@@ -145,66 +145,87 @@ public class ExpenseActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
         switch (item.getItemId()) {
             case R.id.iBills:
+                expcategory_btn.setText("Bills");
                 return true;
 
             case R.id.iCar:
+                expcategory_btn.setText("Cars");
                 return true;
 
             case R.id.iChildren:
+                expcategory_btn.setText("Children");
                 return true;
 
             case R.id.iClothes:
+                expcategory_btn.setText("Clothes");
                 return true;
 
             case R.id.iCommunications:
+                expcategory_btn.setText("Communications");
                 return true;
 
             case R.id.iCosmetics:
+                expcategory_btn.setText("Cosmetics");
                 return true;
 
             case R.id.iEducation:
+                expcategory_btn.setText("Education");
                 return true;
 
             case R.id.iEntertainment:
+                expcategory_btn.setText("Entertainment");
                 return true;
 
             case R.id.iFood:
+                expcategory_btn.setText("Food");
                 return true;
 
             case R.id.iGifts:
+                expcategory_btn.setText("Gifts");
                 return true;
 
             case R.id.iHealth:
+                expcategory_btn.setText("Health");
                 return true;
 
             case R.id.iHobby:
+                expcategory_btn.setText("Hobby");
                 return true;
 
             case R.id.iHouse:
+                expcategory_btn.setText("House");
                 return true;
 
             case R.id.iHygiene:
+                expcategory_btn.setText("Hygiene");
                 return true;
 
             case R.id.iMonthlyMemberships:
+                expcategory_btn.setText("Monthly Memberships/Subscription");
                 return true;
 
             case R.id.iPets:
+                expcategory_btn.setText("Pets");
                 return true;
 
             case R.id.iPocketMoney:
+                expcategory_btn.setText("Pocket Money");
                 return true;
 
             case R.id.iSports:
+                expcategory_btn.setText("Sports");
                 return true;
 
             case R.id.iToiletry:
+                expcategory_btn.setText("Toiletry");
                 return true;
 
             case R.id.iTransportation:
+                expcategory_btn.setText("Transportation");
                 return true;
 
             case R.id.iTravel:
+                expcategory_btn.setText("Travel");
                 return true;
         }
 

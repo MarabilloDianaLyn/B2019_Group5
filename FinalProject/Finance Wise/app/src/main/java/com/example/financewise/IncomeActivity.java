@@ -146,19 +146,22 @@ public class IncomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.iAllowance:
                 inccategory_btn.setText("Allowance");
-
                 return true;
 
             case R.id.iCashAssist:
+                inccategory_btn.setText("Cash Assisstance");
                 return true;
 
             case R.id.iDeposits:
+                inccategory_btn.setText("Deposits");
                 return true;
 
             case R.id.iSalary:
+                inccategory_btn.setText("Salary");
                 return true;
 
             case R.id.iSavings:
+                inccategory_btn.setText("Savings");
                 return true;
 
         }
