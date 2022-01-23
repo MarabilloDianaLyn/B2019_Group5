@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinanceWise">
         <activity
+            android:name=".RetrieveActivity"
+            android:exported="false" />
+        <activity
             android:name=".IncomeActivity"
             android:exported="false" />
         <activity
