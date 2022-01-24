@@ -73,9 +73,6 @@ public class IncomeActivity extends AppCompatActivity {
         income_txtview = findViewById(R.id.inc_txtview);
 
 
-
-
-
 //code for popup menu
         inccategory_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,7 +189,7 @@ public class IncomeActivity extends AppCompatActivity {
                     loader.show();
 
                     String id = budgetRef.push().getKey();
-                    DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
+                    DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
                     Calendar cal = Calendar.getInstance();
                     String date = dateFormat.format(cal.getTime());
 
