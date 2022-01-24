@@ -84,9 +84,7 @@ public class ExpenseActivity extends AppCompatActivity {
 
             }
         });
-
 //------------------------------------------------------------------------------------------------
-
         //function for numeric buttons
         one_expbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,7 +163,6 @@ public class ExpenseActivity extends AppCompatActivity {
                 dot_expbtn.setEnabled(false);
             }
         });
-        
         //-----------------------------------------------------------
 
         expcheck_btn.setOnClickListener(new View.OnClickListener() {
