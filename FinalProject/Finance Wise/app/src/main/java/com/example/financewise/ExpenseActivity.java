@@ -197,7 +197,7 @@ public class ExpenseActivity extends AppCompatActivity {
                     DateTime now = new DateTime();
                     Months months = Months.monthsBetween(epoch, now);
 
-                    expData data = new expData(budgetItem, date, id, Integer.parseInt(budgetAmount), months.getMonths());
+                    Data data = new Data(budgetItem, date, id, Integer.parseInt(budgetAmount), months.getMonths());
                     budgetRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
