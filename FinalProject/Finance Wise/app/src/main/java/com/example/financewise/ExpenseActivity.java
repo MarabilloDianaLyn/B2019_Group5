@@ -47,7 +47,7 @@ public class ExpenseActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         budgetRef = FirebaseDatabase.getInstance().getReference().child("budget").
-                child(mAuth.getCurrentUser().getEmail());
+                child(mAuth.getCurrentUser().getUid());
         loader = new ProgressDialog(this);
 
         //
