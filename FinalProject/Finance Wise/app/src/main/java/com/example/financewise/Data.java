@@ -2,18 +2,27 @@ package com.example.financewise;
 
 public class Data {
 
-    String item, date, id;
+    String category, item, date, id;
     int amount, month;
 
     public Data() {
     }
 
-    public Data(String item, String date, String id, int amount, int month) {
+    public Data(String category, String item, String date, String id, int amount, int month) {
+        this.category = category;
         this.item = item;
         this.date = date;
         this.id = id;
         this.amount = amount;
         this.month = month;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getItem() {

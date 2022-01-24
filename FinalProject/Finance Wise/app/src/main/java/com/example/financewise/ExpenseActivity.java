@@ -169,17 +169,18 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String budgetAmount = expense_txtview.getText().toString();
-                String budgetItem = expcategory_btn.getText().toString();
+                String category = "Expense";
+                String mAmount = expense_txtview.getText().toString();
+                String mItem = expcategory_btn.getText().toString();
 
-                if(TextUtils.isEmpty(budgetAmount)){
+                if(TextUtils.isEmpty(mAmount)){
                     expense_txtview.setError("Please insert amount");
                     return;
                 }
 
-                if(budgetItem.equals("Choose Category")){
+                if(mItem.equals("Choose Category")){
                     Toast.makeText(ExpenseActivity.this,
-                            "Please select valid item", Toast.LENGTH_SHORT).show();
+                            "Please select a category", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else{
@@ -197,7 +198,7 @@ public class ExpenseActivity extends AppCompatActivity {
                     DateTime now = new DateTime();
                     Months months = Months.monthsBetween(epoch, now);
 
-                    Data data = new Data(budgetItem, date, id, Integer.parseInt(budgetAmount), months.getMonths());
+                    Data data = new Data(category, mItem, date, id, Integer.parseInt(mAmount), months.getMonths());
                     budgetRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

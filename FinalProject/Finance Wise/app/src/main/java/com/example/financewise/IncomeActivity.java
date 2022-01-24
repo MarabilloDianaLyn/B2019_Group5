@@ -169,17 +169,18 @@ public class IncomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String budgetAmount = income_txtview.getText().toString();
-                String budgetItem = inccategory_btn.getText().toString();
+                String category = "Income";
+                String mAmount = income_txtview.getText().toString();
+                String mItem = inccategory_btn.getText().toString();
 
-                if (TextUtils.isEmpty(budgetAmount)){
+                if (TextUtils.isEmpty(mAmount)){
                     income_txtview.setError("Please insert amount");
                     return;
                 }
 
-                if (budgetItem.equals("Choose Category")){
+                if (mItem.equals("Choose Category")){
                     Toast.makeText(IncomeActivity.this,
-                            "Please select a valid item", Toast.LENGTH_SHORT).show();
+                            "Please select a category", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else{
@@ -197,7 +198,7 @@ public class IncomeActivity extends AppCompatActivity {
                     DateTime now = new DateTime();
                     Months months = Months.monthsBetween(epoch, now);
 
-                    Data data = new Data(budgetItem, date, id, Integer.parseInt(budgetAmount), months.getMonths());
+                    Data data = new Data(category, mItem, date, id, Integer.parseInt(mAmount), months.getMonths());
                     budgetRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
