@@ -36,8 +36,6 @@ public class IncomeActivity extends AppCompatActivity {
             inccategory_btn;
     private EditText income_date, income_txtview;
 
-
-
     private DatabaseReference budgetRef;
     private FirebaseAuth mAuth;
     private ProgressDialog loader;
@@ -182,6 +180,7 @@ public class IncomeActivity extends AppCompatActivity {
                 if (budgetItem.equals("Choose Category")){
                     Toast.makeText(IncomeActivity.this,
                             "Please select a valid item", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 else{
                     loader.setMessage("Adding an item");

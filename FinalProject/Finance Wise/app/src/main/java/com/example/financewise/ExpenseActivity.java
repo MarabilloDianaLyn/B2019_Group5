@@ -1,8 +1,11 @@
 package com.example.financewise;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.MenuItem;
 
 import android.os.Bundle;
@@ -12,7 +15,25 @@ import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.joda.time.DateTime;
+import org.joda.time.Months;
+import org.joda.time.MutableDateTime;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class ExpenseActivity extends AppCompatActivity {
+
+    private DatabaseReference budgetRef;
+    private FirebaseAuth mAuth;
+    private ProgressDialog loader;
 
     private Button one_expbtn, two_expbtn, three_expbtn, four_expbtn, five_expbtn, six_expbtn,
             seven_expbtn, eight_expbtn, nine_expbtn, zero_expbtn, dot_expbtn, del_expbtn, expcheck_btn,
@@ -23,6 +44,11 @@ public class ExpenseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expense);
+
+        mAuth = FirebaseAuth.getInstance();
+        budgetRef = FirebaseDatabase.getInstance().getReference().child("expense").
+                child(mAuth.getCurrentUser().getEmail());
+        loader = new ProgressDialog(this);
 
         //
         one_expbtn = findViewById(R.id.one_expbtn);
@@ -55,6 +81,7 @@ public class ExpenseActivity extends AppCompatActivity {
 
                 mpopup.inflate(R.menu.expense_popup);
                 mpopup.show();
+
             }
         });
 
@@ -144,7 +171,51 @@ public class ExpenseActivity extends AppCompatActivity {
         expcheck_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (ExpenseActivity.this, DashboardActivity.class);
+
+                String expenseAmount = expense_txtview.getText().toString();
+                String expenseItem = expcategory_btn.getText().toString();
+
+                if(TextUtils.isEmpty(expenseAmount)){
+                    expense_txtview.setError("Please insert amount");
+                    return;
+                }
+
+                if(expenseItem.equals("Choose Category")){
+                    Toast.makeText(ExpenseActivity.this,
+                            "Please select valid item", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else{
+                    loader.setMessage("Adding an item");
+                    loader.setCanceledOnTouchOutside(false);
+                    loader.show();
+
+                    String id = budgetRef.push().getKey();
+                    DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                    Calendar cal = Calendar.getInstance();
+                    String date = dateFormat.format(cal.getTime());
+
+                    MutableDateTime epoch = new MutableDateTime();
+                    epoch.setDate(0);
+                    DateTime now = new DateTime();
+                    Months months = Months.monthsBetween(epoch, now);
+
+                    Data data = new Data(expenseItem, date, id, Integer.parseInt(expenseAmount), months.getMonths());
+                    budgetRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(ExpenseActivity.this, "Expense added successfully", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(ExpenseActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                            }
+                            loader.dismiss();
+                        }
+                    });
+                }
+
+                Intent intent = new Intent (ExpenseActivity.this, RetrieveActivity.class);
                 startActivity(intent);
             }
         });
