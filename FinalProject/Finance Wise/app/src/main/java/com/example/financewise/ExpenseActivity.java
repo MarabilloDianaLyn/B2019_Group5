@@ -46,7 +46,7 @@ public class ExpenseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_expense);
 
         mAuth = FirebaseAuth.getInstance();
-        budgetRef = FirebaseDatabase.getInstance().getReference().child("expense").
+        budgetRef = FirebaseDatabase.getInstance().getReference().child("budget").
                 child(mAuth.getCurrentUser().getEmail());
         loader = new ProgressDialog(this);
 
@@ -169,15 +169,15 @@ public class ExpenseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String expenseAmount = expense_txtview.getText().toString();
-                String expenseItem = expcategory_btn.getText().toString();
+                String budgetAmount = expense_txtview.getText().toString();
+                String budgetItem = expcategory_btn.getText().toString();
 
-                if(TextUtils.isEmpty(expenseAmount)){
+                if(TextUtils.isEmpty(budgetAmount)){
                     expense_txtview.setError("Please insert amount");
                     return;
                 }
 
-                if(expenseItem.equals("Choose Category")){
+                if(budgetItem.equals("Choose Category")){
                     Toast.makeText(ExpenseActivity.this,
                             "Please select valid item", Toast.LENGTH_SHORT).show();
                     return;
@@ -197,7 +197,7 @@ public class ExpenseActivity extends AppCompatActivity {
                     DateTime now = new DateTime();
                     Months months = Months.monthsBetween(epoch, now);
 
-                    expData data = new expData(expenseItem, date, id, Integer.parseInt(expenseAmount), months.getMonths());
+                    expData data = new expData(budgetItem, date, id, Integer.parseInt(budgetAmount), months.getMonths());
                     budgetRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
