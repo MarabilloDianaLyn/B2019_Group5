@@ -43,9 +43,9 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String fullname, email, password;
-                fullname = String.valueOf(rgstr_name.getText());
-                email = String.valueOf(rgstr_email.getText());
-                password = String.valueOf(rgstr_password.getText());
+                fullname = rgstr_name.getText().toString();
+                email = rgstr_email.getText().toString();
+                password = rgstr_password.getText().toString();
 
                 if (!fullname.equals("") && !email.equals("") && !password.equals("")){
 
