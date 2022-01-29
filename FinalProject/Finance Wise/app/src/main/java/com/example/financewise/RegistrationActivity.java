@@ -1,29 +1,17 @@
 package com.example.financewise;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import android.graphics.Color;
-
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.HashMap;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -54,61 +42,46 @@ public class RegistrationActivity extends AppCompatActivity {
         rgstr_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (rgstr_name.getText().toString().equals("")){
-                    Toast.makeText(RegistrationActivity.this, "Enter full name", Toast.LENGTH_SHORT).show();
-                }else if(rgstr_contactno.getText().toString().equals("")){
-                    Toast.makeText(RegistrationActivity.this, "Enter contact number", Toast.LENGTH_SHORT).show();
-                }else if(rgstr_email.getText().toString().equals("")){
-                    Toast.makeText(RegistrationActivity.this, "Enter email", Toast.LENGTH_SHORT).show();
-                }else if(rgstr_password.getText().toString().equals("")){
-                    Toast.makeText(RegistrationActivity.this, "Enter passwordd", Toast.LENGTH_SHORT).show();
+                String fullname, email, password;
+                fullname = String.valueOf(rgstr_name.getText());
+                email = String.valueOf(rgstr_email.getText());
+                password = String.valueOf(rgstr_password.getText());
+
+                if (!fullname.equals("") && !email.equals("") && !password.equals("")){
+
+                    Handler handler = new Handler();
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                           String[] field = new String[3];
+                            field[0] = "fullname";
+                            field[1] = "email";
+                            field[2] = "password";
+                            String[] data = new String[3];
+                            data[0] = fullname;
+                            data[1] = email;
+                            data[2] = password;
+                            PutData putData = new PutData("https://b2019cc107group5.000webhostapp.com/signup.php", "POST", field, data);
+
+                            if (putData.onComplete()) {
+                                String result = putData.getResult();
+                                if (result.equals("Sign Up Success")) {
+                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }
+                    });
                 }
+                else {
+                    Toast.makeText(getApplicationContext(), "All fields are required!", Toast.LENGTH_SHORT).show();
 
-                HashMap<String, String> params = new HashMap<>();
-                params.put("fullname", rgstr_name.getText().toString());
-                params.put("contactno", rgstr_contactno.getText().toString());
-                params.put("email", rgstr_contactno.getText().toString());
-                params.put("password", rgstr_password.getText().toString());
-                fw_register(params);
-
-
+                }
             }
         });
-    }
-
-    private void fw_register(HashMap <String, String> params){
-
-        final ProgressDialog progressDialog = new ProgressDialog(RegistrationActivity.this);
-        progressDialog.setTitle("Please wait");
-        progressDialog.setMessage("Registering...");
-        progressDialog.setCancelable(false);
-        progressDialog.show();
-
-        NetworkService networkService = NetworkClient.getClient().create(NetworkService.class);
-        Call<RegisterResponseModel> registerCall = networkService.fw_register(params);
-        registerCall.enqueue(new Callback<RegisterResponseModel>() {
-            @Override
-            public void onResponse(Call<RegisterResponseModel> call, Response<RegisterResponseModel> response) {
-                RegisterResponseModel responseBody = response.body();
-                if (responseBody != null){
-                    if (responseBody.getSuccess().equals("1")){
-                        Toast.makeText(RegistrationActivity.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegistrationActivity.this, LogInActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }else{
-                        Toast.makeText(RegistrationActivity.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-                progressDialog.dismiss();
-            }
-
-            @Override
-            public void onFailure(Call<RegisterResponseModel> call, Throwable t) {
-                progressDialog.dismiss();
-
-            }
-        });
-
     }
 }
