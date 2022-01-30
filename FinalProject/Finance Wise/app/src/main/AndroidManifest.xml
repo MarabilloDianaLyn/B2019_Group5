@@ -14,22 +14,22 @@
         android:theme="@style/Theme.FinanceWise">
         <activity
             android:name=".RetrieveActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".IncomeActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ExpenseActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".DashboardActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RegistrationActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".LogInActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
