@@ -40,7 +40,6 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(RegistrationActivity.this, LogInActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
