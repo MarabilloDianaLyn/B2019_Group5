@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,17 +15,18 @@
         android:src="@drawable/financewise_logo" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutUsername"
+        android:id="@+id/textInputLayoutLoginUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:hint= "@string/username"
         android:textColor="#000"
         android:textColorHint="@color/gray"
         android:textSize="20sp" >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/loginusername"
+            android:id="@+id/loginemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_fname"
@@ -35,7 +35,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutPassword"
+        android:id="@+id/textInputLayoutLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
