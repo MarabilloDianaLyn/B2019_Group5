@@ -74,6 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
                                     if(result.equals("Sign up success")){
+                                        Toast.makeText(getApplicationContext(),result, Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(RegisterActivity.this, LogInActivity.class);
                                         startActivity(intent);
                                         finish();
