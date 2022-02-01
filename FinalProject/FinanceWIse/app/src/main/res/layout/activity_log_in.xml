@@ -14,51 +14,7 @@
         android:layout_height="196dp"
         android:src="@drawable/financewise_logo" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutLoginUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="2dp"
-        android:hint= "@string/username"
-        android:textColor="#000"
-        android:textColorHint="@color/gray"
-        android:textSize="20sp" >
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/loginusername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_uname"
-            tools:targetApi="jelly_bean" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutLoginPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="2dp"
-        android:hint= "@string/password"
-        android:textColor="#000"
-        android:textColorHint="@color/gray"
-        android:textSize="20sp" >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/loginpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_pass"
-            tools:targetApi="jelly_bean" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ProgressBar
-        android:id="@+id/loginprogress"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/login_btn"
