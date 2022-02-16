@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Finance Wise</string>
+    <string name="log_in">Log In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="fullname">Full name</string>
+    <string name="email">Email</string>
+    <string name="inc_amount">Enter amount</string>
+</resources>

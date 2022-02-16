@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/iAllowance"
+        android:title="Allowance">
+    </item>
+    <item
+        android:id="@+id/iCA"
+        android:title="Cash Assisstance">
+    </item>
+    <item
+        android:id="@+id/iDeposits"
+        android:title="Deposits">
+    </item>
+    <item
+        android:id="@+id/iSalary"
+        android:title="Salary">
+    </item>
+    <item
+        android:id="@+id/iSavings"
+        android:title="Savings">
+    </item>
+</menu>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/outline">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:src="@drawable/for_lview" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/for_lview" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/feday"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/darkgreen"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/fecategitem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="1dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font_src"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fecategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:gravity="bottom"
+                android:paddingBottom="1dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font_src"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/feamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="50dp"
+                android:gravity="bottom"
+                android:paddingBottom="1dp"
+                android:textColor="@color/red"
+                android:fontFamily="@font/font_src"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/femonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="70dp"
+                android:gravity="bottom"
+                android:paddingBottom="1dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font_src"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/feyear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="90dp"
+                android:gravity="bottom"
+                android:paddingBottom="1dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font_src"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

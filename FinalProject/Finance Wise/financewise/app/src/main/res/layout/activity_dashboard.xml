@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/usertext"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/mintgreen"
+                android:text="Dashboard"
+                android:textSize="25sp"
+                android:paddingLeft="15dp"
+                android:paddingTop="23dp"
+                android:textColor="@color/white"/>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/history_cv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ic_history"
+                            android:layout_marginTop="18dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="History"
+                            android:fontFamily="sans-serif"
+                            android:textSize="22sp"
+                            android:layout_marginTop="20dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/future_cv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ic_datee"
+                            android:layout_marginTop="18dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Future Expense"
+                            android:fontFamily="sans-serif"
+                            android:textSize="22sp"
+                            android:layout_marginTop="20dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/monthly_cv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ic_datee"
+                            android:layout_marginTop="18dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly"
+                            android:fontFamily="sans-serif"
+                            android:textSize="22sp"
+                            android:layout_marginTop="20dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/yearly_cv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/ic_datee"
+                            android:layout_marginTop="18dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yearly"
+                            android:fontFamily="sans-serif"
+                            android:textSize="22sp"
+                            android:layout_marginTop="20dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/expense_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/expensebtn_background"
+                android:text="-"
+                android:textColor="#FF0000"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/income_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/incomebtn_background"
+                android:text="+"
+                android:textColor="#00FF55"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

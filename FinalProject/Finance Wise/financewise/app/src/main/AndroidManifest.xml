@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.financewise">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_fiwilogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_fiwilogo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinanceWise"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".FutureExpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".YearlyRetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MonthlyRetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpenseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IncomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
