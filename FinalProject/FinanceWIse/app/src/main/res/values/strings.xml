@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Finance WIse</string>
-    <string name="username">username</string>
-    <string name="password">password</string>
-    <string name="log_in">Log In</string>
-    <string name="sign_up">sign up</string>
-    <string name="email">email</string>
-    <string name="full_name">full name</string>
-</resources>
