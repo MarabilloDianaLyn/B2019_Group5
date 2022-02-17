@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class CustomFutureListView extends ArrayAdapter<String> {
+public class CustomFutureListView extends ArrayAdapter<String>{
 
     private String[] fcategory;
     private String[] fcategitem;
@@ -34,7 +34,7 @@ public class CustomFutureListView extends ArrayAdapter<String> {
     }
 
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
-        View f=convertView;
+        View f = convertView;
         CustomFutureListView.ViewHolder viewHolder = null;
         if(f==null){
             LayoutInflater layoutInflater=fcontext.getLayoutInflater();
@@ -71,8 +71,7 @@ public class CustomFutureListView extends ArrayAdapter<String> {
             f4=(TextView)v.findViewById(R.id.femonth);
             f5=(TextView)v.findViewById(R.id.feday);
             f6=(TextView)v.findViewById(R.id.feyear);
-
         }
-
     }
+
 }

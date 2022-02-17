@@ -97,7 +97,7 @@
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:src="@drawable/ic_datee"
+                            android:src="@drawable/financialguide"
                             android:layout_marginTop="18dp"/>
 
                         <TextView
@@ -140,7 +140,7 @@
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:src="@drawable/ic_datee"
+                            android:src="@drawable/payment"
                             android:layout_marginTop="18dp"/>
 
                         <TextView
@@ -175,7 +175,7 @@
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:src="@drawable/ic_datee"
+                            android:src="@drawable/ic_year"
                             android:layout_marginTop="18dp"/>
 
                         <TextView

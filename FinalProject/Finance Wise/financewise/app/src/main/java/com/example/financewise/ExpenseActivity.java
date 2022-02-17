@@ -360,7 +360,7 @@ public class ExpenseActivity extends AppCompatActivity {
                 return true;
 
             case R.id.iMMS:
-                expcategory_btn.setText("Monthly Memberships/Subscription");
+                expcategory_btn.setText("Memberships/Subscription");
                 return true;
 
             case R.id.iPets:

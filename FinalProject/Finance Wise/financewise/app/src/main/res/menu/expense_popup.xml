@@ -50,7 +50,7 @@
     </item>
     <item
         android:id="@+id/iMMS"
-        android:title="Monthly Memberships/Subscription">
+        android:title="Memberships/Subscription">
     </item>
     <item
         android:id="@+id/iPets"
