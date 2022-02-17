@@ -140,7 +140,7 @@
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:src="@drawable/payment"
+                            android:src="@drawable/payments"
                             android:layout_marginTop="18dp"/>
 
                         <TextView
@@ -169,8 +169,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:gravity="center"
-                        >
+                        android:gravity="center">
 
                         <ImageView
                             android:layout_width="70dp"
