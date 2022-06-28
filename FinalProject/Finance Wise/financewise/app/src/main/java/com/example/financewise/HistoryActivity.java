@@ -17,7 +17,7 @@ import java.net.URL;
 
 public class HistoryActivity extends AppCompatActivity {
 
-    String urladdress="https://b2019cc107group5.000webhostapp.com/try.php";
+    String urladdress="https://b2019cc107group5.000webhostapp.com/retrieveData.php";
     String[] category;
     String[] categitem;
     String[] amount;
